@@ -1,0 +1,19 @@
+{
+  "name": "gamedary",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "sass": "sass --watch ./public/sass/index.scss:./public/css/index.css"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "sass": "^1.74.1"
+  }
+}

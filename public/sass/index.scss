@@ -1,0 +1,175 @@
+$primary-color: rgb(12 99 210 / 88%);
+$secondary-color: rgb(42 101 176);
+$shadow-color: #3434344a;
+
+body {
+    background-color: #090909d9;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.content-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .content-game {
+        background-color: #e8e8e8;
+        max-width: 1300px;
+        height: 90vh;
+        width: 70%;
+        min-width: 350px;
+
+        .header {
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            box-sizing: border-box;
+            box-shadow: 0 12px 14px 1px $shadow-color;
+            background-color: $primary-color;
+
+            .title {
+                h2 {
+                    margin: 0;
+                    color: white;
+
+                }
+            }
+        }
+
+        .content-image {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            height: 80vh;
+
+            figure {
+                width: 20%;
+                margin: 0;
+                height: 30%;
+                cursor: pointer;
+                position: relative;
+                transition: 0.4s;
+                box-shadow: 0 0 2px 1px #0c63d2ab;
+                border-radius: 12px;
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                user-select: none;
+                min-width: 90px;
+
+                .layer {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgb(59 59 59);
+                    transition: 0.4s;
+                    border-radius: 12PX;
+                }
+
+                .pointer-event-none {
+                    pointer-events: none;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+
+                }
+            }
+
+        }
+
+        .footer {
+            height: 40px;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+
+            .row {
+                display: flex;
+                gap: 12px;
+                width: 100%;
+
+                .left {
+                    width: 50%;
+                    gap: 12px;
+                    display: flex;
+                }
+
+                .right {
+                    display: flex;
+                    justify-content: end;
+                    width: 40%;
+
+                    button {
+                        height: 30px;
+                        width: 100px;
+                        padding: 2px;
+                        color: white;
+                        background-color: $primary-color;
+                        font-size: 18px;
+                        border: 0;
+                        border-radius: 4px;
+                        box-shadow: 0 0 8px 2px $shadow-color;
+                        cursor: pointer;
+                        transition: 0.2s;
+                    }
+
+                    button:hover {
+                        background-color: $secondary-color;
+                    }
+                }
+
+                p {
+                    margin: 0;
+                    padding: 0 12px;
+                    box-sizing: border-box;
+                    font-size: 26px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 895px) {
+    .content-game {
+        width: 98% !important;
+
+        .content-image {
+            height: 70vh !important;
+
+            figure {
+                height: 20% !important;
+            }
+        }
+        .footer {
+            height: auto !important;
+
+            .row {
+                flex-direction: column;
+
+                .left {
+                    width: 100% !important;
+                }
+
+                .right {
+                    width: 100% !important;
+                    justify-content: start !important;
+                    margin: 0 0 10px 10px;
+                }
+            }
+        }
+    }
+}
